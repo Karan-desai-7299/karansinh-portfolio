@@ -328,7 +328,7 @@ export default function Resume() {
           }}
         >
           <iframe
-            src="/public/karan main - Copy.pdf"
+            src="/public/karanCopy.pdf"
             title="Karansinh Desai Resume"
             style={{
               width: "100%",
@@ -341,7 +341,7 @@ export default function Resume() {
 
         {/* Download Button */}
         <motion.a
-          href="/public/karan main - Copy.pdf"
+          href="/public/karanCopy.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
