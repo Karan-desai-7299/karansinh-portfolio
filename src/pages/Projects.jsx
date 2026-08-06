@@ -6,7 +6,7 @@ const PROJECTS = [
 {
   title: '🤖 AI Resume ATS Scorer',
   desc: 'An AI-powered resume screening platform that evaluates resumes against job descriptions using NLP, semantic similarity, ATS scoring, and LLM-generated improvement suggestions.',
-  ss: '/dist/project/Screenshot 2026-08-06 194835.png',
+  ss: '/project/Screenshot 2026-08-06 194835.png',
   tech: [
     'Python',
     'FastAPI',
@@ -22,7 +22,7 @@ const PROJECTS = [
 {
   title: '📸 SnapClass AI Attendance',
   desc: 'An AI-powered attendance system using face recognition, voice recognition, QR-based enrollment, Supabase authentication, and a teacher verification workflow.',
-  ss: '/dist/project/Screenshot 2026-08-06 195716.png',
+  ss: '/project/Screenshot 2026-08-06 195716.png',
   tech: [
     'Python',
     'Streamlit',
@@ -39,7 +39,7 @@ const PROJECTS = [
 {
   title: '✂️ AI Text Summarizer',
   desc: 'Transformer-based AI application that generates concise summaries from lengthy documents and articles through an intuitive web interface.',
-  ss: '/dist/project/Screenshot 2026-08-06 200948.png',
+  ss: '/project/Screenshot 2026-08-06 200948.png',
   tech: [
     'Python',
     'FastAPI',
@@ -53,7 +53,7 @@ const PROJECTS = [
 {
   title: '🚗 Ride Hailing Web Application',
   desc: 'A full-stack MERN ride-hailing platform featuring Google Maps integration, live ride tracking, OTP-secured rides, Socket.IO communication, fare estimation, and dedicated rider and captain dashboards.',
-  ss: '/dist/project/Screenshot 2026-08-06 200112.png',
+  ss: '/project/Screenshot 2026-08-06 200112.png',
   tech: [
     'React',
     'Vite',
@@ -71,7 +71,7 @@ const PROJECTS = [
 {
   title: '🏠 RentConnect',
   desc: 'A full-stack rental platform connecting tenants and property owners with smart property search, nearby recommendations, visit booking, JWT authentication, real-time chat, and owner analytics.',
-  ss: '/dist/project/Screenshot 2026-08-06 200347.png',
+  ss: '/project/Screenshot 2026-08-06 200347.png',
   tech: [
     'React',
     'Node.js',
@@ -87,7 +87,7 @@ const PROJECTS = [
 {
   title: '🎵 Symphony Music Streaming',
   desc: 'A full-stack MERN music streaming platform featuring secure authentication, playlists, artist dashboard, music streaming, dark/light themes, and a modern responsive UI.',
-  ss: '/dist/project/Screenshot 2026-08-06 201712.png',
+  ss: '/project/Screenshot 2026-08-06 201712.png',
   tech: [
     'React',
     'Vite',
@@ -104,7 +104,7 @@ const PROJECTS = [
 {
   title: '📱 Social Media Web App',
   desc: 'A full-stack MERN social media application that enables users to create posts, upload images, and browse a dynamic real-time content feed with MongoDB-powered backend integration.',
-  ss: '/dist/project/Screenshot 2026-08-06 202141.png',
+  ss: '/project/Screenshot 2026-08-06 202141.png',
   tech: [
     'React.js',
     'Node.js',
@@ -119,7 +119,7 @@ const PROJECTS = [
 {
   title: '🖼️ React Image Gallery',
   desc: 'A modern and responsive image gallery application built with React and Vite that fetches images from the Picsum API. Features include image search, pagination, responsive layouts, image preview, downloads, and smooth loading animations.',
-  ss: '/dist/project/Screenshot 2026-08-06 202446.png',
+  ss: '/project/Screenshot 2026-08-06 202446.png',
   tech: [
     'React.js',
     'Vite',
@@ -134,7 +134,7 @@ const PROJECTS = [
 {
   title: '📝 To-Do Web App',
   desc: 'A responsive task management application built with HTML, CSS, and JavaScript that enables users to create, organize, and manage daily tasks through a clean and intuitive interface.',
-  ss: '/dist/project/Screenshot 2026-08-06 202957.png',
+  ss: '/project/Screenshot 2026-08-06 202957.png',
   tech: [
     'HTML5',
     'CSS3',
