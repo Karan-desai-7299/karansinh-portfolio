@@ -339,26 +339,50 @@ export default function Resume() {
           />
         </motion.div>
 
-        {/* Download Button */}
-        <motion.a
-          href="/public/karanCopy.pdf"
-          download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          style={{
-            display: "inline-block",
-            marginTop: 20,
-            background: "#00b4ff",
-            color: "#fff",
-            padding: "10px 22px",
-            borderRadius: 8,
-            textDecoration: "none",
-            fontWeight: 500,
-            letterSpacing: 0.3,
-          }}
-        >
-          ⬇️ Download Resume
-        </motion.a>
+{/* PDF Viewer */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.2 }}
+  style={{
+    marginTop: 50,
+    borderRadius: 12,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,0.1)",
+  }}
+>
+  <iframe
+    src="/karanCopy.pdf"
+    title="Karansinh Desai Resume"
+    style={{
+      width: "100%",
+      height: "650px",
+      border: "none",
+      background: "#111",
+    }}
+  />
+</motion.div>
+
+{/* Download Button */}
+<motion.a
+  href="/karanCopy.pdf"
+  download
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  style={{
+    display: "inline-block",
+    marginTop: 20,
+    background: "#00b4ff",
+    color: "#fff",
+    padding: "10px 22px",
+    borderRadius: 8,
+    textDecoration: "none",
+    fontWeight: 500,
+    letterSpacing: 0.3,
+  }}
+>
+  ⬇️ Download Resume
+</motion.a>
 
 
       </motion.div>
