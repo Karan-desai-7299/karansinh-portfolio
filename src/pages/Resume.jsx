@@ -315,29 +315,7 @@ export default function Resume() {
           ))}
         </motion.div>
 
-        {/* PDF Viewer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          style={{
-            marginTop: 50,
-            borderRadius: 12,
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          <iframe
-            src="/public/karanCopy.pdf"
-            title="Karansinh Desai Resume"
-            style={{
-              width: "100%",
-              height: "650px",
-              border: "none",
-              background: "#111",
-            }}
-          />
-        </motion.div>
+
 
 {/* PDF Viewer */}
 <motion.div
