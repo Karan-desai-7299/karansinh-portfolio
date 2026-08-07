@@ -121,7 +121,7 @@ export default function Home() {
           <motion.div className="info-cards">
             {[
               { label: '📍 Location', value: 'Kolhapur, Maharashtra, India' },
-              { label: '💼 Expertise', value: 'MERN Stack, Python (Fask & Fast Api' },
+              { label: '💼 Expertise', value: 'MERN Stack, Python (Fask & Fast Api)' },
               { label: '📧 Contact', value: 'karansinhdesai91@gmail.com' },
             ].map((info, i) => (
               <motion.div key={i} whileHover={{ y: -4, scale: 1.05 }} transition={{ type: 'spring', stiffness: 250 }} className="info-card">
