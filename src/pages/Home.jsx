@@ -30,8 +30,7 @@ export default function Home() {
 
   const professions = [
     'Full Stack Developer',
-    'Python Developer',
-    'MERN Stack Developer',
+    'MERN Stack & Python Developer',
     'GenAI Explorer',
     'Problem Solver',
   ]

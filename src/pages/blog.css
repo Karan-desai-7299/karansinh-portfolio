@@ -1,97 +1,165 @@
 .blog-section {
   width: 100%;
-  padding: 3rem 8%;
-  color: white;
-  text-align: center;
+  min-height: calc(100vh - 76px);
+  padding: var(--section-y) var(--page-pad);
+  color: var(--text);
+  text-align: left;
+}
+
+.blog-title,
+.blog-sub,
+.blog-grid {
+  width: min(var(--container), 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-title {
-  font-size: 2rem;
-  margin-bottom: 0.2rem; /* less top margin */
+  margin-bottom: 12px;
   color: #fff;
+  font-weight: 900;
+}
+
+.blog-title::after {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 
 .blog-sub {
-  color: #aaa;
-  margin-bottom: 2rem;
+  max-width: 760px;
+  margin-bottom: 38px;
+  color: var(--muted);
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--grid-gap);
 }
 
 .blog-post {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 1.8rem;
-  width: 100%;
-  text-align: left;
-  transition: all 0.3s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--card-pad);
 }
 
-.post-title {
-  font-size: 1.2rem;
+.blog-post .post-title {
+  margin-bottom: 14px;
   color: #fff;
-  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 850;
+  line-height: 1.35;
 }
 
 .post-text {
-  color: #ccc;
+  flex: 1;
+  margin-bottom: 24px;
+  color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-/* vote buttons */
 .vote-container {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 14px;
 }
 
 .vote-btn-circle {
-  background: rgba(255, 255, 255, 0.05);
-  border: none;
-  border-radius: 50%;
-  padding: 0.8rem;
-  color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.25s ease;
   position: relative;
-  box-shadow: 0 0 8px rgba(255,255,255,0.05);
-}
-
-.vote-btn-circle:hover {
-  background: rgba(255, 255, 255, 0.1);
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  padding: 0;
+  color: var(--muted-strong);
+  background: rgba(255, 255, 255, 0.045);
 }
 
 .vote-btn-circle.active.agree {
-  background: rgba(0, 255, 130, 0.15);
-  color: #00ff82;
-  box-shadow: 0 0 10px rgba(0, 255, 130, 0.4);
+  color: var(--success);
+  border-color: rgba(34, 197, 94, 0.42);
+  background: rgba(34, 197, 94, 0.1);
 }
 
 .vote-btn-circle.active.disagree {
-  background: rgba(255, 0, 70, 0.15);
-  color: #ff0050;
-  box-shadow: 0 0 10px rgba(255, 0, 70, 0.4);
+  color: var(--error);
+  border-color: rgba(239, 68, 68, 0.42);
+  background: rgba(239, 68, 68, 0.1);
 }
 
 .vote-btn-circle:disabled {
-  opacity: 0.6;
   cursor: not-allowed;
+  opacity: 0.72;
 }
 
 .vote-count {
   position: absolute;
-  bottom: -0.5rem;
-  font-size: 0.7rem;
-  color: #aaa;
+  right: -6px;
+  bottom: -7px;
+  min-width: 22px;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--surface-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-sub {
+    margin-bottom: 26px;
+  }
+
+  .blog-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blog-post {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .blog-post .post-title {
+    font-size: 1.02rem;
+  }
+
+  .post-text {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
+  .vote-container {
+    justify-content: space-between;
+  }
+
+  .vote-btn-circle {
+    width: 52px;
+    height: 52px;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vote-container {
+    gap: 10px;
+  }
 }

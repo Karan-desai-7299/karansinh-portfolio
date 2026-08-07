@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "../CSS/Resume.css";
 
 export default function Resume() {
   return (
-    <section className="container" style={{ padding: "60px 0" }}>
+    <section className="container resume-container" style={{ padding: "60px 0" }}>
       <motion.div
-        className="card"
+        className="card resume-card"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -37,6 +38,7 @@ export default function Resume() {
 
         {/* Profile Header */}
         <motion.div
+          className="resume-profile"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -68,6 +70,7 @@ export default function Resume() {
           </div>
 
           <motion.div
+            className="profile-summary"
             whileHover={{ scale: 1.05 }}
             style={{
               background: "linear-gradient(135deg, #00b4ff44, #0b0b0b)",
@@ -95,6 +98,7 @@ export default function Resume() {
 
         {/* Education Section with Border Box */}
         <motion.div
+          className="resume-section"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
@@ -152,6 +156,7 @@ export default function Resume() {
 
 {/* Featured Projects */}
 <motion.div
+  className="resume-section featured-projects"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.8 }}
@@ -227,6 +232,7 @@ export default function Resume() {
 
         {/* Skills */}
         <motion.div
+          className="resume-section resume-skills-section"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
@@ -285,6 +291,7 @@ export default function Resume() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4 }}
+          className="resume-links"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -319,6 +326,7 @@ export default function Resume() {
 
 {/* PDF Viewer */}
 <motion.div
+  className="resume-pdf"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 1.2 }}
@@ -343,6 +351,7 @@ export default function Resume() {
 
 {/* Download Button */}
 <motion.a
+  className="resume-download"
   href="/karanCopy.pdf"
   download
   whileHover={{ scale: 1.05 }}

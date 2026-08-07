@@ -1,179 +1,235 @@
-/*
-  Variables scoped to .certs-section, NOT :root — a :root declaration here
-  would leak globally and override index.css's --accent everywhere.
-*/
 .certs-section {
-  --certs-accent: #007bff;
-  --certs-bg-card: #111;
-  --certs-bg-cert: #1a1a1a;
-  --certs-text-main: #fff;
-  --certs-text-muted: #bbb;
-  padding: 40px 0;
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
 }
 
 .certs-card {
-  background: var(--certs-bg-card);
-  border-radius: 12px;
-  padding: 24px;
+  padding: clamp(24px, 3vw, 36px);
 }
 
 .certs-card h2 {
-  font-size: 1.8rem;
-  color: var(--certs-text-main);
-  margin-bottom: 4px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.certs-card h2::after {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 
 .certs-card .lead {
-  color: #aaa;
+  max-width: 760px;
+  margin-bottom: 28px;
+  color: var(--muted);
 }
 
 .certs-tabs {
   display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.tab {
-  padding: 8px 18px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #333;
-  color: var(--certs-text-main);
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.tab.active {
-  background: var(--certs-accent);
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .certs-grid {
-  margin-top: 28px;
+  margin-top: 32px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  align-items: stretch; /* every card in a row matches the tallest */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--grid-gap);
+  align-items: stretch;
 }
 
-/* Fixed-size card: image + title + meta + scrollable description + actions */
 .cert.card {
-  background: var(--certs-bg-cert);
-  border-radius: 12px;
-  padding: 16px;
-  color: var(--certs-text-main);
+  height: 460px;
   display: flex;
   flex-direction: column;
-  height: 430px; /* every card is this height, regardless of content */
+  padding: 18px;
 }
 
 .cert-img-wrap {
   width: 100%;
-  height: 160px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
+  height: 170px;
   flex-shrink: 0;
-  background: #000;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .cert-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.cert.card:hover .cert-img-wrap img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
 }
 
 .cert-title {
-  font-size: 16px;
+  min-height: 2.7em;
   display: -webkit-box;
+  overflow: hidden;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 850;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 2.6em; /* reserves 2 lines even for short titles, so meta row lines up */
 }
 
 .cert.card .muted {
-  font-size: 13px;
-  color: var(--certs-text-muted);
-  margin-top: 4px;
   flex-shrink: 0;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.45;
 }
 
-/* Description area: fixed remaining space, scrolls internally if text is long */
 .cert-desc-wrap {
   flex: 1;
-  min-height: 0; /* required for overflow to work inside a flex child */
+  min-height: 0;
   overflow-y: auto;
-  margin-top: 8px;
-  padding-right: 4px;
+  margin-top: 10px;
+  padding-right: 6px;
 }
 
 .cert-desc-wrap::-webkit-scrollbar {
   width: 5px;
 }
+
 .cert-desc-wrap::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.26);
 }
 
 .cert-desc {
-  font-size: 13px;
-  color: var(--certs-text-muted);
-  line-height: 1.5;
   margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.58;
 }
 
 .cert-actions {
-  margin-top: 12px;
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
   flex-shrink: 0;
 }
 
 .cert.card .btn {
-  flex: 1;
-  background: var(--certs-accent);
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  padding: 8px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-}
-
-.cert.card .btn-outline {
-  background: transparent;
-  border: 1px solid var(--certs-accent);
-  color: var(--certs-accent);
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  font-size: 0.83rem;
 }
 
 .cert.card .btn-outline:disabled {
-  opacity: 0.35;
+  opacity: 0.42;
   cursor: not-allowed;
-  border-color: var(--certs-text-muted);
-  color: var(--certs-text-muted);
 }
 
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--page-pad);
+  background: rgba(3, 7, 18, 0.86);
+  backdrop-filter: blur(12px);
 }
 
 .modal img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 10px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  max-width: min(1100px, 96vw);
+  max-height: 88vh;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  object-fit: contain;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 768px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert.card {
+    height: auto;
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certs-card {
+    padding: var(--card-pad);
+  }
+
+  .certs-card .lead {
+    margin-bottom: 22px;
+    line-height: 1.65;
+  }
+
+  .certs-tabs {
+    gap: 10px;
+  }
+
+  .certs-tabs .tab {
+    flex: 1 1 100%;
+  }
+
+  .certs-grid {
+    margin-top: 24px;
+  }
+
+  .cert.card {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .cert-img-wrap {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    margin-bottom: 14px;
+  }
+
+  .cert-desc-wrap {
+    max-height: 116px;
+    flex: initial;
+  }
+
+  .cert-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 64px;
+  }
+
+  .modal img {
+    width: 100%;
+    max-height: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .cert-title {
+    font-size: 0.94rem;
+  }
+
+  .cert-desc {
+    font-size: 0.8rem;
+  }
 }

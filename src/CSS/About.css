@@ -1,98 +1,158 @@
-/*
-  NOTE: this file intentionally does NOT redeclare :root variables
-  (--accent, --accent-2, etc). src/index.css already defines those
-  globally for the whole app. Redeclaring :root here would silently
-  override the site-wide theme colors depending on CSS import order —
-  the same class of bug fixed on the Home page's .quick-links collision.
-  This file just consumes the existing variables.
-*/
-
 .about-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 76px);
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background: radial-gradient(circle at top, #0d0d0d, #000);
-  color: white;
-  padding: 3rem 1rem;
-  z-index: 1;
+  padding: var(--section-y) var(--page-pad);
+  color: var(--text);
 }
 
 .about-card {
-  width: 100%;
-  max-width: 1100px;
-  text-align: left;
-  margin-top: 1rem;
-  line-height: 1.8;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 3rem 3.5rem;
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.08);
-  backdrop-filter: blur(10px);
+  width: min(var(--container), 100%);
+  padding: clamp(28px, 4vw, 52px);
 }
 
 .about-header {
-  font-size: 1.9rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 22px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.about-header::after,
+.education-header::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .about-text {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 1rem;
+  max-width: 1040px;
+  margin-bottom: 18px;
+  color: var(--muted-strong);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: #fff;
+  font-weight: 800;
 }
 
 .education-section {
-  margin-top: 3rem;
+  margin-top: var(--section-gap);
 }
 
 .education-header {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  color: transparent;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(1.45rem, 1.8vw, 2rem);
+  font-weight: 900;
 }
 
 .education-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
 }
 
 .edu-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
-  padding: 1.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 15px rgba(0, 255, 200, 0.05);
+  min-height: 260px;
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  transition: all 0.3s ease;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: var(--card-pad);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(8, 13, 23, 0.72));
+  box-shadow: var(--shadow);
 }
 
 .edu-icon {
-  color: var(--accent);
   flex-shrink: 0;
+  color: var(--accent-2);
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(34, 211, 238, 0.08);
 }
 
 .edu-title {
-  color: var(--accent);
-  margin-bottom: 0.4rem;
-  font-size: 1.25rem;
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  font-weight: 850;
 }
 
-.edu-institute {
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 0.2rem;
-}
-
+.edu-institute,
 .edu-details {
-  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.edu-institute strong {
+  color: var(--muted-strong);
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .education-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card {
+    min-height: auto;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-card {
+    padding: var(--card-pad);
+  }
+
+  .edu-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    margin-bottom: 16px;
+    font-size: 0.94rem;
+    line-height: 1.72;
+  }
+
+  .education-section {
+    margin-top: 38px;
+  }
+
+  .edu-card {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .edu-title {
+    font-size: 1rem;
+  }
+
+  .edu-institute,
+  .edu-details {
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-header::after,
+  .education-header::after {
+    width: 58px;
+  }
 }
