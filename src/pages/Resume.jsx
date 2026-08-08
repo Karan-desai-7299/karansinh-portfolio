@@ -365,7 +365,7 @@ export default function Resume() {
   }}
 >
   <iframe
-    src="/karanCopy.pdf"
+    src="/karansinh-resume.pdf"
     title="Karansinh Desai Resume"
     style={{
       width: "100%",
