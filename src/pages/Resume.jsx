@@ -45,7 +45,7 @@ export default function Resume() {
         >
           <motion.a
             className="resume-download"
-            href="/karanCopy.pdf"
+            href="/karansinh-resume.pdf"
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -380,7 +380,7 @@ export default function Resume() {
 <motion.div className="resume-bottom-actions">
   <motion.a
     className="resume-download"
-    href="/karanCopy.pdf"
+    href="/karansinh-resume.pdf"
     download
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
