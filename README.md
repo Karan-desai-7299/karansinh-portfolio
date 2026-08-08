@@ -94,35 +94,29 @@ karansinh-portfolio/
 
 ## 🚀 Featured Projects
 
-### 🚖 Uber Clone
-Real-time ride booking platform with authentication, Google Maps integration, Socket.io, and responsive UI.
+- 🤖 **AI Resume ATS Scorer** — AI-powered resume analysis, ATS scoring, semantic similarity, and LLM-generated feedback using FastAPI, NLP, and Groq Llama 3.
 
-**Tech:** React, Node.js, Express.js, MongoDB, Socket.io
+- 📸 **SnapClass AI Attendance System** — AI-based attendance management using face recognition, voice verification, QR enrollment, and Supabase authentication.
 
----
+- 🚖 **Ride Hailing Web Application (MERN)** — Full-stack ride-booking platform featuring JWT authentication, Google Maps API, Socket.io, ride tracking, and real-time communication.
 
-### 🤖 MedAI Point
-AI-powered healthcare assistant for point-of-care diagnostics using machine learning and computer vision concepts.
+- 🏠 **RentConnect** — Property rental platform built with the MERN stack, enabling property listings, user authentication, and rental management.
 
----
+- 🎵 **Symphony Music Streaming** — Spotify-inspired MERN application with secure authentication, playlists, artist dashboard, and responsive music streaming interface.
 
-### 📄 AI Text Summarizer
-Summarizes long articles using NLP and Transformer models.
+- 📄 **AI Text Summarizer** — NLP-based web application that generates concise summaries from long documents using Transformer models and Python.
 
-**Tech:** Python, FastAPI, Hugging Face Transformers
+- 📱 **Social Media Web App** — MERN-based social networking platform with authentication, image uploads, post creation, and dynamic content feeds.
 
----
-
-### 💬 DocuChat
-Document Question Answering chatbot powered by Google Gemini API.
+- 🖼️ **React Image Gallery** — Responsive image gallery using React, Vite, Axios, and the Picsum API with search, pagination, and image preview functionality.
 
 ---
 
 ## 📜 Certifications
 
-- Electronic Arts Software Engineering Job Simulation
-- BCG GenAI Job Simulation
-- Eduskills AI Internship
+- Infosys Springboard: Python, HTML5, CSS3, JavaScript, React.js, and Database Management System (DBMS) Certifications.
+- HackerRank: Python, CSS, JavaScript, SQL, React, Node.js, Software Engineer Intern, and Software Engineer Certifications.
+- Earned 50+ professional certifications across Software & Full Stack Development, Ai/ML, and Programming from leading learning platforms.
 - Various Technical Certifications
 
 ---
