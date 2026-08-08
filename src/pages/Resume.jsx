@@ -36,6 +36,32 @@ export default function Resume() {
           A quick glance at my journey.
         </motion.p>
 
+        {/* Download Button */}
+        <motion.div
+          className="resume-front-actions"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+        >
+          <motion.a
+            className="resume-download"
+            href="/karanCopy.pdf"
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download Resume
+          </motion.a>
+          <motion.a
+            className="resume-view"
+            href="#resume-pdf-viewer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Resume
+          </motion.a>
+        </motion.div>
+
         {/* Profile Header */}
         <motion.div
           className="resume-profile"
@@ -326,6 +352,7 @@ export default function Resume() {
 
 {/* PDF Viewer */}
 <motion.div
+  id="resume-pdf-viewer"
   className="resume-pdf"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
@@ -350,27 +377,17 @@ export default function Resume() {
 </motion.div>
 
 {/* Download Button */}
-<motion.a
-  className="resume-download"
-  href="/karanCopy.pdf"
-  download
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  style={{
-    display: "inline-block",
-    marginTop: 20,
-    background: "#00b4ff",
-    color: "#fff",
-    padding: "10px 22px",
-    borderRadius: 8,
-    textDecoration: "none",
-    fontWeight: 500,
-    letterSpacing: 0.3,
-  }}
->
-  ⬇️ Download Resume
-</motion.a>
-
+<motion.div className="resume-bottom-actions">
+  <motion.a
+    className="resume-download"
+    href="/karanCopy.pdf"
+    download
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Download Resume
+  </motion.a>
+</motion.div>
 
       </motion.div>
     </section>
