@@ -4,6 +4,15 @@ import "../CSS/Certificates.css";
 
 const CERTS = {
   tech: [
+        {
+      title: "Problem Solving (Basic)",
+      org: "HackRank",
+      date: "August 2026",
+      description:"Happy to share that I’ve earned the **Problem Solving (Basic) Certificate** from **HackerRank**! 🎉💻 This certification is another step toward improving my problem-solving, logical thinking, and coding skills. Looking forward to learning more, solving more challenges, and growing as a developer. 🚀 #HackerRank #ProblemSolving #Coding #DSA #Programming #Learning #CareerGrowth",
+      img: "/public/certificate/problem_solving_basic certificate_page-0001.jpg", // TODO: this is just a placeholder graphic — replace
+      live: "https://www.hackerrank.com/certificates/iframe/484ec408d08e",
+    },
+
     {
       title: "Software Engineer",
       org: "HackRank",
