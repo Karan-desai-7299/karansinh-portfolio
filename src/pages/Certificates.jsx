@@ -481,6 +481,17 @@ description:"Happy to share that I have successfully completed the Web Design & 
 
 
   other: [
+
+            {
+      title: "Certificate of Participation – ISRO Bharatiya Antariksh Hackathon 2026",
+      org: "ISRO (Indian Space Research Organisation)",
+      date: "August 2026",
+      description:"I’m happy to share that I participated in the Bharatiya Antariksh Hackathon 2026, presented by ISRO (Indian Space Research Organisation) and powered by Hack2skill. This national-level hackathon gave me an opportunity to contribute an idea focused on solving real-world challenges in India’s space ecosystem. 🌌🚀 Grateful for the experience, learning, and opportunity to be part of this innovation initiative. Keep learning. Keep building. Keep exploring. #ISRO #BharatiyaAntarikshHackathon #Hack2skill #Hackathon2026 #Innovation #SpaceTechnology #ProblemSolving #Learning #Technology #India",
+      img: "/certificate/2026H2S06BAH-P07499_page-0001.jpg", // TODO: this is just a placeholder graphic — replace
+      live: "https://certificate.hack2skill.com/verify/2026H2S06BAH-P07499",
+    },
+
+
         {
       title: "TENZOR National Ai Hacthon",
       org: "Poonawalla Fincorp",
