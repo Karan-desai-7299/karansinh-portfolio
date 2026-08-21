@@ -517,6 +517,15 @@ description:"Happy to share that I have successfully completed the Web Design & 
       img: "/certificate/IMG-20260204-WA0050.jpg", // TODO: this is just a placeholder graphic — replace
       live: "/certificate/IMG-20260204-WA0050.jpg",
     },
+        {
+  title: "Personality Value Assessment – Goodness Programme",
+  org: "GoodSpace AI",
+  date: "August 2026",
+  description:
+    "I’m happy to share that I have successfully completed the Personality Value Assessment – Goodness Programme conducted by GoodSpace AI Private Limited. The assessment focused on important professional values such as Teamwork, Honesty, and Integrity — values that I believe are essential for building a strong and successful career. Grateful for the opportunity to reflect on my professional behavior and continue improving myself. 🚀",
+  img: "/certificate/certificate-GS-2026-D8619E_page-0001.jpg",
+  live: "https://goodspace.ai/s/54LCdSJ",
+},
 
         {
       title: "Inter-Institutional Innovation Hackathon",
