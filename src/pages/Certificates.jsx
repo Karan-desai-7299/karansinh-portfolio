@@ -492,6 +492,17 @@ description:"Happy to share that I have successfully completed the Web Design & 
     },
 
 
+
+                {
+      title: "Certificate of Participation in Adobe University Hackathon 2026",
+      org: "Unstop",
+      date: "August 2026",
+      description:"🚀 Proud to share my Certificate of Participation in the Adobe University Hackathon 2026! It was a great opportunity to participate in a hackathon organized by Adobe and gain valuable experience in problem-solving, innovation, and teamwork. Looking forward to learning more, building innovative solutions, and participating in more such opportunities. 💻✨ #Adobe #AdobeHackathon #Hackathon2026 #Innovation #ProblemSolving #Technology #Learning #StudentDeveloper",
+      img: "/certificate/5cb527da-027b-46b7-b68f-2a1eeb03d376_page-0001.jpg", // TODO: this is just
+      live: "https://unstop.com/certificate-preview/5cb527da-027b-46b7-b68f-2a1eeb03d376?utm_campaign=",
+    },
+
+
         {
       title: "TENZOR National Ai Hacthon",
       org: "Poonawalla Fincorp",
