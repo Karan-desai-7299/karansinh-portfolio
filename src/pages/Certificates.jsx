@@ -5,6 +5,15 @@ import "../CSS/Certificates.css";
 const CERTS = {
   tech: [
         {
+      title: "Gemini Certified Student – University qualification",
+      org: "Google for Education",
+      date: "September 2026",
+      description:"🌟 Proud to share that I’ve earned the Gemini Certified Student – University qualification from Google for Education! This certification recognizes my knowledge, skills, and basic competencies in using Google AI. It’s another valuable step in my journey of learning and exploring Artificial Intelligence and emerging technologies. 🚀🤖 Looking forward to applying these skills in real-world projects and continuing to grow in AI. 💻✨",
+      img: "/certificate/gemini student.png", // TODO: this is just a placeholder graphic — replace
+      live: "https://edu.google.accredible.com/9af224db-ef1c-4d8b-b31b-907cdeb5cce3#acc.8FHjSD0G",
+    },
+
+        {
       title: "Problem Solving (Basic)",
       org: "HackRank",
       date: "August 2026",
