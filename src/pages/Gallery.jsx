@@ -125,7 +125,7 @@ const IMAGES = {
         {
       id: 1,
       caption: "Grateful for these learning opportunities and excited to apply my knowledge to build innovative, AI-powered solutions! 💡",
-      photos: ["/public/gallery/genai.png", "/public/gallery/Enterprise AI Engineering_ RAG,Vector Search & MCP  (1).png",],
+      photos: ["/gallery/genai.png", "/gallery/Enterprise AI Engineering_ RAG,Vector Search & MCP  (1).png",],
     },
     {
       id: 1,
