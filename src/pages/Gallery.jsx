@@ -122,6 +122,11 @@ const IMAGES = {
   ],
 
   achievements: [
+        {
+      id: 1,
+      caption: "Grateful for these learning opportunities and excited to apply my knowledge to build innovative, AI-powered solutions! 💡",
+      photos: ["/public/gallery/genai.png", "/public/gallery/Enterprise AI Engineering_ RAG,Vector Search & MCP  (1).png",],
+    },
     {
       id: 1,
       caption: "The reward haul from completing Google Cloud Arcade challenges — swag, mug, and all.",

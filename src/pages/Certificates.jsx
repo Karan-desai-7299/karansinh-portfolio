@@ -408,7 +408,7 @@ description:"Happy to share that I have successfully completed the Web Design & 
   org: "EduSkills | AICTE | National Internship Portal",
   date: "October 2026",
   description:"Successfully completed the 8-week AICTE–EduSkills Virtual Internship in Enterprise AI Engineering: RAG, Vector Search & MCP, during August–October 2026. Looking forward to applying these concepts to build intelligent, scalable, and AI-powered applications. 🚀 #ArtificialIntelligence #GenerativeAI #RAG #VectorSearch #MCP #AICTE #EduSkills #VirtualInternship #ContinuousLearning",
-  img: "Enterprise AI Engineering_ RAG,Vector Search & MCP Virtual Internship_page-0001.jpg",
+  img: "/certificate/Enterprise AI Engineering_ RAG,Vector Search & MCP Virtual Internship_page-0001.jpg",
   live: "https://certificate.eduskillsfoundation.org/verify/4cc3b481cca8cd923b39/4cc3b481cca8cd923b39",
 },
 
